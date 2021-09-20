@@ -43,7 +43,8 @@ jobs:
     steps:
     
      - name: First_step
-       run : echo "$LOCAl"
+       run : |
+        echo "$LOCAL"
        env: 
         LOCAL : "local variable "
        
