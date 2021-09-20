@@ -1,11 +1,10 @@
 # Называния афйла, отображается в разделе Workflow
 
-name: PHP Comoser
+name: PHP_Comoser
 
 on:
   push:
-    branches: 
-      -main
+    branches: main
 
 jobs:
 
