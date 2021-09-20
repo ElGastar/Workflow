@@ -13,14 +13,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - uses: actions/checkout@v1
+     - name: Git version
+       run : echo git -v
      - name: First_step
        run : echo ok
-     - name : List
+     - name: List
        run : ls -la
   name_of_second_job:
     runs-on: ubuntu-latest
+    needs: [name_of_job]
     steps:
      - name: First_step
        run : echo ok
-     - name : List
+     - name: List
        run : ls -la
