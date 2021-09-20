@@ -1,6 +1,7 @@
 # Называния афйла, отображается в разделе Workflow
 
 name: PHP_Comoser
+
 env:  
   APP : "name"
   ID_COMMIT : ${{ github.sha }}
@@ -13,20 +14,36 @@ on:
 jobs:
 
   name_of_job:
+  
     runs-on: ubuntu-latest
+    
+    env:
+      VAR1 : "Key 1"
     steps:
      - uses: actions/checkout@v1
+     
      - name: Git version
        run : git version
-     - name: First_step
-       run : echo ID_COMMIT
+       
+     - name: App name
+       run : echo ${{ env.APP}}
+       
      - name: List
        run : ls -la
+       
+     - name: List
+       run : echo ${{ VAR1.APP}}
+       
   name_of_second_job:
+  
     runs-on: ubuntu-latest
+    
     needs: [name_of_job]
+    
     steps:
+    
      - name: First_step
        run : echo ok
+       
      - name: List
        run : ls -la
