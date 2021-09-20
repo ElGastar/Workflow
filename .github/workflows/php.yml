@@ -1,0 +1,16 @@
+# Называния афйла, отображается в разделе Workflow
+
+name: PHP Comoser
+
+on:
+  push:
+    branches: 
+      -main
+
+jobs:
+
+  name_of_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: First_step
+        run : echo ok
