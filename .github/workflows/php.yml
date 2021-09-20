@@ -2,6 +2,7 @@
 
 name: PHP_Comoser
 
+# Acton сработывает только когда пушит в ветку маин
 on:
   push:
     branches: main
@@ -12,6 +13,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - uses: actions/checkout@v1
+     - name: First_step
+       run : echo ok
+     - name : List
+       run : ls -la
+  name_of_second_job:
+    runs-on: ubuntu-latest
+    steps:
      - name: First_step
        run : echo ok
      - name : List
