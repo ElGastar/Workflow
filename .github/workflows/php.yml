@@ -11,5 +11,8 @@ jobs:
   name_of_job:
     runs-on: ubuntu-latest
     steps:
-      - name: First_step
-        run : echo ok
+     - uses: actions/checkout@v1
+     - name: First_step
+       run : echo ok
+     - name : List
+       run : ls -la
