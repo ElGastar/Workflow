@@ -43,7 +43,9 @@ jobs:
     steps:
     
      - name: First_step
-       run : echo ok
+       env: 
+        LOCAL : "local variable "
+       run : echo $LOCAl
        
      - name: List
        run : ls -la
