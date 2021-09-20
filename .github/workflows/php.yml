@@ -1,6 +1,9 @@
 # Называния афйла, отображается в разделе Workflow
 
 name: PHP_Comoser
+env:  
+  APP : "name"
+  ID_COMMIT : ${{ github.sha }}
 
 # Acton сработывает только когда пушит в ветку маин
 on:
@@ -16,7 +19,7 @@ jobs:
      - name: Git version
        run : git version
      - name: First_step
-       run : echo ok
+       run : echo ${{ID_COMMIT}}
      - name: List
        run : ls -la
   name_of_second_job:
