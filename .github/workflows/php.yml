@@ -31,7 +31,7 @@ jobs:
      - name: List
        run : ls -la
        
-     - name: List
+     - name: Local environment
        run : echo ${{ ENV.VAR1}}
        
   name_of_second_job:
