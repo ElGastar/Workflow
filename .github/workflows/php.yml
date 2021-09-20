@@ -19,7 +19,7 @@ jobs:
      - name: Git version
        run : git version
      - name: First_step
-       run : echo ${{ID_COMMIT}}
+       run : echo ID_COMMIT
      - name: List
        run : ls -la
   name_of_second_job:
